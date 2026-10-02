@@ -2,7 +2,7 @@ const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
 const ids=$$('.lesson').map(x=>x.id),KEY='pkos-workshop-v1';let data={checks:{},notes:{}};let all=false;
 try{const saved=JSON.parse(localStorage.getItem(KEY));if(saved&&saved.checks&&saved.notes)data=saved}catch(e){}
 function notify(t){const el=$('#toast');el.textContent=t;el.hidden=false;clearTimeout(window.toastTimer);window.toastTimer=setTimeout(()=>el.hidden=true,2200)}
-function save(){try{localStorage.setItem(KEY,JSON.stringify(data))}catch(e){notify('이 브라우저에서는 저장되지 않는다. 학습 기록 내보내기를 쓴다.')}}
+function save(){try{localStorage.setItem(KEY,JSON.stringify(data))}catch(e){notify('이 브라우저에서는 저장되지 않습니다. 「학습 기록 내보내기」로 받아 두세요.')}}
 function progress(){const n=ids.filter(id=>data.checks[id]).length;$('#progresslabel').textContent=`완료 ${n} / ${ids.length}`;$('#progressbar').style.width=`${n/ids.length*100}%`;$$('[data-chapter]').forEach(a=>a.classList.toggle('done',!!data.checks[a.dataset.chapter]))}
 const names={home:'학습 지도',start:'준비',qr:'가져가기 · QR',review:'진행 · 점검'};
 function route(){let id=decodeURIComponent(location.hash.slice(1))||'home';const el=document.getElementById(id);
@@ -24,8 +24,8 @@ $('#search').oninput=()=>{const q=$('#search').value.trim().toLowerCase();let n=
  $$('.nav .group').forEach(g=>{let x=g.nextElementSibling,any=false;while(x&&!x.classList.contains('group')){if(!x.hidden)any=true;x=x.nextElementSibling}g.hidden=!any});
  $('#noresults').hidden=n>0};
 $$('.copy').forEach(btn=>btn.onclick=async()=>{const code=btn.closest('.codebox').querySelector('code'),text=code.textContent;
- try{if(navigator.clipboard&&window.isSecureContext)await navigator.clipboard.writeText(text);else{const ta=document.createElement('textarea');ta.value=text;document.body.appendChild(ta);ta.select();const ok=document.execCommand('copy');ta.remove();if(!ok)throw Error('copy')}notify('복사했다. 붙여 넣기 전에 내용을 확인한다.')}
- catch(e){const r=document.createRange();r.selectNodeContents(code);const s=getSelection();s.removeAllRanges();s.addRange(r);notify('선택된 내용을 Ctrl+C로 복사한다.')}});
+ try{if(navigator.clipboard&&window.isSecureContext)await navigator.clipboard.writeText(text);else{const ta=document.createElement('textarea');ta.value=text;document.body.appendChild(ta);ta.select();const ok=document.execCommand('copy');ta.remove();if(!ok)throw Error('copy')}notify('복사했습니다. 붙여 넣기 전에 내용을 한 번 확인하세요.')}
+ catch(e){const r=document.createRange();r.selectNodeContents(code);const s=getSelection();s.removeAllRanges();s.addRange(r);notify('내용을 선택해 두었습니다. Ctrl+C로 복사하세요.')}});
 $$('.photobutton').forEach(btn=>btn.onclick=()=>{const im=btn.querySelector('img');$('#largeimage').src=im.src;$('#largeimage').alt=im.alt;$('#phototitle').textContent='사진 '+im.dataset.number+' · '+im.alt;$('#photocaption').textContent=btn.parentElement.querySelector('figcaption').textContent.replace(/^사진 \S+\s*/,'');$('#lightbox').showModal()});
 $('#closephoto').onclick=()=>$('#lightbox').close();$('#lightbox').onclick=e=>{if(e.target===$('#lightbox'))$('#lightbox').close()};
 $$('.oschoices').forEach(group=>{const btns=[...group.querySelectorAll('[data-os]')];btns.forEach(btn=>btn.onclick=()=>{const c=btn.dataset.os;btns.forEach(b=>b.setAttribute('aria-pressed',String(b===btn)));
