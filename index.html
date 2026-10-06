@@ -17,7 +17,7 @@
   <div class="eyebrow">TEACHER WORKSHOP / PKOS</div>
   <div class="brand">PKOS 도구 모음<br>기록장 · 변환기 · 사이트</div>
   <p class="brandsub">흩어진 기록을 다시 꺼내 쓰는 세 가지 도구</p>
-  <div class="navtop"><a href="#home">학습 지도</a><a href="#qr">가져가기 · QR</a><a href="#review">진행 · 점검</a></div>
+  <div class="navtop"><a href="#home">학습 지도</a><a href="presentation/">발표 페이지</a><a href="#qr">가져가기 · QR</a><a href="#review">진행 · 점검</a></div>
   <label class="search">학습 내용 찾기<input id="search" type="search" placeholder="예: 백업, 코랩, _메모.txt" autocomplete="off"></label>
   <div class="progresslabel" id="progresslabel">완료 0 / 13</div>
   <div class="progress" aria-hidden="true"><div id="progressbar"></div></div>
@@ -310,12 +310,12 @@
       <p>코랩이 낯설거나 PC에 있는 폴더를 바로 변환하고 싶을 때 씁니다. Windows 앱은 창에서 단추를 눌러 가며 쓰고 교재판은 따라 하는 실습 교재와 함께 씁니다.</p>
       <div class="oschoices" role="group" aria-label="PC 변환 방법 고르기"><button type="button" data-os="app" aria-pressed="true">Windows 앱</button><button type="button" data-os="py" aria-pressed="false">파이썬 교재판</button></div>
       <div class="ospanel" data-os-panel="app">
-        <div class="setupstep"><span class="stepn">1</span><div><h3>ZIP 받기</h3><p><a href="https://github.com/legoschool/pkos-fileconverter/releases/tag/v0.1.0" target="_blank" rel="noopener">릴리스 페이지</a>의 Assets에서 <code>PKOS-Windows-v0.1.0.zip</code>(약 48MB)을 받습니다. 파이썬이 실행 파일 안에 들어 있어서 따로 설치하지 않아도 됩니다.</p></div></div>
+        <div class="setupstep"><span class="stepn">1</span><div><h3>ZIP 받기</h3><p><a href="https://github.com/legoschool/pkos-fileconverter/releases/tag/v0.1.1" target="_blank" rel="noopener">릴리스 페이지</a>의 Assets에서 <code>PKOS-Windows-v0.1.1.zip</code>(약 48MB)을 받습니다. 파이썬이 실행 파일 안에 들어 있어서 따로 설치하지 않아도 됩니다.</p></div></div>
         <div class="setupstep"><span class="stepn">2</span><div><h3>모두 압축 풀기</h3><p>ZIP 파일을 오른쪽 단추로 눌러 「모두 압축 풀기」를 합니다. ZIP 안에서 바로 실행하지는 마세요.</p></div></div>
         <div class="setupstep"><span class="stepn">3</span><div><h3>PKOS.exe 실행</h3><p>PKOS 폴더 안의 <code>PKOS.exe</code>를 두 번 누르고 「샘플로 테스트」부터 눌러 봅니다.</p></div></div>
         <div class="setupstep"><span class="stepn">4</span><div><h3>내 폴더 변환</h3><p>원본 경로를 붙여 넣고 결과 폴더를 고른 다음 변환을 시작합니다. 진행 상태 보기, 중지, 결과 미리보기, 폴더 열기를 쓸 수 있습니다. 원본이 구글 드라이브에 있으면 그 폴더를 「오프라인으로 사용」으로 둔 뒤 변환합니다(<a href="#start">준비</a>).</p></div></div>
-        <div class="photogrid one"><figure><button class="photobutton" type="button"><img src="img/conv-release.webp" alt="자료변환기 v0.1.0 릴리스 페이지" data-number="08-1" loading="lazy"></button><figcaption><span class="photonum">사진 08-1</span>자료변환기 v0.1.0 릴리스 페이지입니다. 아래쪽 Assets에서 Windows ZIP을 받습니다.</figcaption></figure></div>
-        <aside class="callout warn"><h3>실행이 막히면 보안 설정은 그대로 두세요</h3><p>Windows 64비트용 초기판입니다. 만든 PC에서는 앱 제어 정책 때문에 EXE 실행 확인을 끝내지 못했습니다. 실행이 차단되면 코랩(06장)을 쓰거나 관리자에게 문의하세요. 블로그 PDF를 글별로 나누는 일과 구글 문서 변환은 코랩에서 합니다.</p></aside>
+        <div class="photogrid one"><figure><button class="photobutton" type="button"><img src="img/conv-release.webp" alt="자료변환기 v0.1.1 릴리스 페이지" data-number="08-1" loading="lazy"></button><figcaption><span class="photonum">사진 08-1</span>자료변환기 v0.1.1 릴리스 페이지입니다. 아래쪽 Assets에서 Windows ZIP을 받습니다.</figcaption></figure></div>
+        <aside class="callout warn"><h3>실행이 막히면 보안 설정은 그대로 두세요</h3><p>Windows 64비트용입니다. v0.1.1은 PDF 샘플과 ODT 변환, 개인정보 가리기를 확인했습니다. 실행이 차단되면 코랩(06장)을 쓰거나 관리자에게 문의하세요. 블로그 PDF를 글별로 나누는 일과 구글 문서 변환은 코랩에서 합니다.</p></aside>
       </div>
       <div class="ospanel" data-os-panel="py" hidden>
         <p>파이썬이 설치된 Windows PC에서 씁니다. <a href="https://legoschool.github.io/pkos-textbook/" target="_blank" rel="noopener">자료변환기 실습 교재</a>가 설치부터 변환까지 15블록으로 차근차근 안내합니다.</p>
@@ -483,6 +483,7 @@ python pkos.py --자가진단</code></pre></div>
         <li><time>2026.10.01</time><span>드라이브 자료 사본 7,203개를 카드 5,087장으로 넣어 직접 써 보면서 지식맵과 속도를 고쳤습니다.</span></li>
         <li><time>2026.10.02</time><span>사용 설명서와 실습 카드를 만들었습니다. 세 도구도 깃허브에서 가져갈 수 있게 정리했습니다.</span></li>
         <li><time>2026.10.05</time><span>연수 뒤 기록장을 정비했습니다. 「서재 현황」과 조건 찾기를 넣고, 문서 카드 5,000장에 본문 앞부분을 채웠고(스캔한 PDF 193개는 Windows 글자 인식으로 따로 읽음), 카드 안 구글 드라이브 미리보기는 보기 전용으로 두었습니다. 자료변환기는 읽지 못하던 워드·PPT 일부와 .odt, XML로 저장한 한글 문서를 읽게 고쳤습니다. 이어서 「함께 읽을 기록」과 지식맵 연결을 드문 낱말 기준으로 바꾸고, 드라이브 여러 곳에 있는 같은 문서를 목록에서 한 줄로 묶고, 지도에서 점을 누르면 미리 보기가 열리게 했습니다. 기록 연결 창과 태그 칸은 지금 쓰는 글과 비슷한 기록과 그 태그를 먼저 보여 줍니다.</span></li>
+        <li><time>2026.10.06</time><span>자료변환기 Windows v0.1.1에 최신 문서 읽기와 주민등록번호 가림 수정을 담았습니다.</span></li>
       </ol>
       <h3>써 보며 고친 것</h3>
       <ul>

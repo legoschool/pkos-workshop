@@ -4,6 +4,8 @@
 
 **사이트: https://legoschool.github.io/pkos-workshop/**
 
+[발표 페이지 · PKOS 개인지식운영체계](https://legoschool.github.io/pkos-workshop/presentation/)
+
 | 도구 | 하는 일 | 바로 쓰기 | 저장소 |
 |---|---|---|---|
 | 기록장 (PKOS 나의지식서재) | 메모와 문서, 사진에 내 생각을 더해 서로 잇는 개인 서재입니다. 로그인 없이 쓰고 기록은 브라우저에 저장됩니다. | [체험 서재](https://legoschool.github.io/pkos-library/?demo=1) · [사용 설명서](https://legoschool.github.io/pkos-library/manual/) | [legoschool/pkos-library](https://github.com/legoschool/pkos-library) |
@@ -18,7 +20,7 @@
 |---|---|
 | `index.html` | 사이트 전체입니다. 블록은 `#b01`~`#b13`, QR은 `#qr`, 진행 안내는 `#review`에 있습니다. |
 | `assets/` | 모양(`site.css`)과 동작(`site.js`) |
-| `img/` | 화면 사진 35장 (WebP) |
+| `img/` | 화면 사진 36장 (WebP) |
 | `qr/` | 세 도구와 이 사이트의 QR 코드 (SVG) |
 | `files/maker-sample.zip` | 제작기 실습에 쓰는 예시 폴더 「우리반-텃밭-기록」 (지어낸 내용) |
 
